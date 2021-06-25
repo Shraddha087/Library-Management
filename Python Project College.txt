@@ -1,0 +1,340 @@
+# Program of Library Management
+
+
+from tkinter import *
+from tkinter import messagebox
+from tkinter import ttk
+
+base1 = Tk()
+base1.geometry("1000x1000")
+base1.title("Welcome.....")
+f_obj = ("Arial Bold", 20)
+bg =base1.configure(bg = "yellow")
+
+btn1 = Button(width = 2000, height = 5 ,  bg = "red")
+btn1.pack()
+
+btn2 = Button(width = 2000, height = 5, bg = "red")
+btn2.place(x = 0, y = 650)
+
+txt1 = ttk.Notebook(width = 800, height = 500)
+txt1.place(x = 300, y = 100)
+
+lab1 = Label(base1, text = "LOGIN" , font = ("Verdana 28 underline"))
+lab1.place(x = 600, y = 120)
+
+lab2 = Label(base1, text = "User ID", font = ("style", 15))
+lab2.place(x = 465, y = 220)
+
+txt2 = Entry(base1, width = 50)
+txt2.place(x = 620, y = 220)
+
+lab3 = Label(base1, text = "Password", font = ("style", 15))
+lab3.place(x = 465, y = 320)
+
+txt3 = Entry(base1, width = 50)
+txt3.place(x = 620, y = 320)
+
+btn4 = Button(base1, text = "RESET", font = 15, fg = "white", bg = "red")
+btn4.place(x = 710, y = 400)
+
+lab4 = Label(base1, text = "New User! Sign Up Here.",fg = "red", font = "Verdana 15 underline")
+lab4.place(x = 410, y = 480)
+
+lab5 = Label(base1, text = "Forget Password. ", fg = "red", font = "Verdana 15 underline")
+lab5.place(x = 730, y = 480)
+
+
+def method2():
+    base2 = Tk()
+    base2.geometry("1000x1000")
+    base2.title(".....")
+    bg = base2.configure(bg = "white")
+
+
+
+
+    def add_students():
+        lab21 = Label(base2, text="ADD STUDENTS", font="Verdana 20 underline")
+        lab21.place(x=465, y=150)
+
+        lab22 = Label(base2, text = "ROLL:-", font = 25)
+        lab22.place(x =465, y = 230)
+
+        txt21 = Entry(base2, width = 50)
+        txt21.place(x = 650, y = 230)
+
+        lab23 = Label(base2, text = "NAME:-", font = 25)
+        lab23.place(x = 465, y = 290)
+
+        txt22 = Entry(base2, width = 50)
+        txt22.place(x = 650, y = 290)
+
+        lab24 = Label(base2, text = "CLASS:-", font = 25)
+        lab24.place(x = 465, y = 340)
+
+        txt23 = Entry(base2, width = 50)
+        txt23.place(x = 650, y = 340)
+
+        lab25 = Label(base2, text = "EMAIL:-", font = 25)
+        lab25.place(x = 465, y = 390)
+
+        txt24 = Entry(base2, width = 50)
+        txt24.place(x = 650, y = 390)
+
+        lab26 = Label(base2, text = "PHONE NO.:-", font = 25)
+        lab26.place(x = 465, y = 440)
+
+        txt25 = Entry(base2, width = 50)
+        txt25.place(x = 650, y = 440)
+
+        def message():
+            messagebox.showinfo("Done", "Student added...")
+
+        btn21 = Button(base2, text = "SAVE", font = ("Arial Bold", 15), fg = "white", bg = "red", width = 15, height = 1 , command = message)
+        btn21.place(x = 650, y = 500)
+
+        def clear_screen():
+            txt21.delete(0, END)
+            txt22.delete(0, END)
+            txt23.delete(0, END)
+            txt24.delete(0,END)
+            txt25.delete(0, END)
+            txt21.focus()
+
+
+        btn22 = Button(base2, text = "CLEAR", font = ("Arial Bold", 15), fg = "white", bg = "red", width = 15, height = 1, command = clear_screen)
+        btn22.place(x = 650, y = 590)
+
+
+
+    def clear():
+        txt31 = ttk.Notebook(base2, width = 1500, height = 600)
+        txt31.place(x = 275, y = 117)
+
+    def issue_book():
+        lab21 = Label(base2, text="ISSUE BOOK", font="Verdana 20 underline")
+        lab21.place(x=465, y=150)
+
+        lab22 = Label(base2, text="BOOK NUMBER:-", font=25)
+        lab22.place(x=465, y=230)
+
+        txt41 = Entry(base2, width=50)
+        txt41.place(x=650, y=230)
+
+        lab23 = Label(base2, text="BOOK NAME:-", font=25)
+        lab23.place(x=465, y=290)
+
+        txt42 = Entry(base2, width=50)
+        txt42.place(x=650, y=290)
+
+        lab24 = Label(base2, text="BOOK AUTHOR:-", font=25)
+        lab24.place(x=465, y=340)
+
+        txt43 = Entry(base2, width=50)
+        txt43.place(x=650, y=340)
+
+        lab25 = Label(base2, text="PUBLICATION:-", font=25)
+        lab25.place(x=465, y=390)
+
+        txt44 = Entry(base2, width=50)
+        txt44.place(x=650, y=390)
+
+        def message():
+            messagebox.showinfo("Done", "Book Issued..")
+
+        btn21 = Button(base2, text="SAVE", font=("Arial Bold", 15), fg="white", bg="red", width=15, height=1, command = message)
+        btn21.place(x=650, y=500)
+
+        def clear_s():
+            txt41.delete(0, END)
+            txt42.delete(0, END)
+            txt43.delete(0, END)
+            txt44.delete(0, END)
+            txt41.focus()
+
+        btn22 = Button(base2, text="CLEAR", font=("Arial Bold", 15), fg="white", bg="red", width=15, height=1, command = clear_s)
+        btn22.place(x=650, y=590)
+
+    def add_book():
+        lab21 = Label(base2, text="ADD BOOK", font="Verdana 20 underline")
+        lab21.place(x=465, y=150)
+
+        lab22 = Label(base2, text="BOOK NUMBER:-", font=25)
+        lab22.place(x=465, y=230)
+
+        txt21 = Entry(base2, width=50)
+        txt21.place(x=650, y=230)
+
+        lab23 = Label(base2, text="BOOK NAME:-", font=25)
+        lab23.place(x=465, y=290)
+
+        txt22 = Entry(base2, width=50)
+        txt22.place(x=650, y=290)
+
+        lab24 = Label(base2, text="BOOK AUTHOR:-", font=25)
+        lab24.place(x=465, y=340)
+
+        txt23 = Entry(base2, width=50)
+        txt23.place(x=650, y=340)
+
+        lab25 = Label(base2, text="PUBLICATION:-", font=25)
+        lab25.place(x=465, y=390)
+        txt24 = Entry(base2, width=50)
+        txt24.place(x=650, y=390)
+
+        def message():
+            messagebox.showinfo("Done", "Book added successfully...")
+
+        btn21 = Button(base2, text="SAVE", font=("Arial Bold", 15), fg="white", bg="red", width=15, height=1, command = message)
+        btn21.place(x=650, y=500)
+
+        def clear_screen():
+            txt21.delete(0, END)
+            txt22.delete(0, END)
+            txt23.delete(0, END)
+            txt24.delete(0, END)
+            txt21.focus()
+
+        btn22 = Button(base2, text="CLEAR", font=("Arial Bold", 15), fg="white", bg="red", width=15, height=1, command = clear_screen)
+        btn22.place(x=650, y=590)
+
+    def not_return_book():
+        txt1 = Label(base2, text="NOT RETURN BOOK", font="Verdana 20 underline")
+        txt1.place(x = 465, y = 150)
+
+
+
+        btn2 = Button(base2, text = "CLEAR", fg = "white", bg = "red", font = ("Arial Bold", 15), width = 15, height =1 )
+        btn2.place(x = 665, y = 210)
+
+        def show():
+            txt2 = Label(base2, text = "1. Student Name:-  Manisha Pendharkar      Book Name:- JAVA      Issue Date:- 23-05-2021 ", font = 25 )
+            txt2.place(x = 465, y = 350)
+
+            txt3 = Label(base2, text = "2. Student Name:-  Vaishali Nile                      Book Name:- Python      Issue Date:- 23-05-2021 ", font = 25 )
+            txt3.place(x = 465, y = 420)
+
+        btn1 = Button(base2, text = "SHOW", fg = "white", bg = "red", font = ("Arial Bold", 15), width = 15, height =1, command = show)
+        btn1.place(x = 465, y = 210)
+
+    def return_book():
+        lab1 = Label(base2, text="RETURN BOOK", font="Verdana 20 underline")
+        lab1.place(x = 465, y = 150)
+
+        lab22 = Label(base2, text="BOOK NUMBER:-", font=25)
+        lab22.place(x=465, y=230)
+
+        txt21 = Entry(base2, width=50)
+        txt21.place(x=650, y=230)
+
+        def message():
+            messagebox.showinfo("FINE", "No Fine...")
+
+        btn21 = Button(base2, text="CHECK FINE", font=("Arial Bold", 15), fg="white", bg="red", width=18, height=1, command = message)
+        btn21.place(x=650, y=500)
+
+        def message():
+            messagebox.showinfo("Done", "Book Returned!!...")
+
+        btn22 = Button(base2, text="RETURN", font=("Arial Bold", 15), fg="white", bg="red", width=15, height=1, command = message)
+        btn22.place(x=650, y=590)
+
+    def remove_students():
+        lab1 = Label(base2, text="REMOVE STUDENTS", font="Verdana 20 underline")
+        lab1.place(x = 465, y = 150)
+
+        lab22 = Label(base2, text="ROLL NUMBER:-", font=25)
+        lab22.place(x=465, y=230)
+
+        txt21 = Entry(base2, width=50)
+        txt21.place(x=650, y=230)
+
+        def message():
+            messagebox.showinfo("Done", "Student Removed...")
+
+        btn21 = Button(base2, text="REMOVE", font=("Arial Bold", 15), fg="white", bg="red", width=18, height=1, command = message)
+        btn21.place(x=650, y=500)
+
+    def search_book():
+        lab1 = Label(base2, text="SEARCH BOOK", font="Verdana 20 underline")
+        lab1.place(x=465, y=150)
+
+        lab22 = Label(base2, text="BOOK NUMBER:-", font=25)
+        lab22.place(x=465, y=230)
+
+        txt21 = Entry(base2, width=50)
+        txt21.place(x=650, y=230)
+
+        def search():
+            lab1 = Label(base2, text = "Name :- JAVA", font = 25)
+            lab1.place(x = 1200, y = 160)
+
+            lab2 = Label(base2, text = "Author :- Ravi Sir", font = 25)
+            lab2.place(x = 1200, y = 200)
+
+            lab3 = Label(base2, text = "Publication :- JAVA Publication", font = 25)
+            lab3.place(x = 1200, y = 250)
+
+            btn21 = Button(base2, text="OK", font=("Arial Bold", 15), fg="white", bg="red", width=10, height=1)
+            btn21.place(x=1250, y=350)
+
+        btn21 = Button(base2, text="SEARCH", font=("Arial Bold", 15), fg="white", bg="red", width=18, height=1, command = search)
+        btn21.place(x=650, y=500)
+
+    def remainder():
+        lab1 = Label(base2, text="REMAINDER", font="Verdana 20 underline")
+        lab1.place(x=465, y=150)
+
+        def message():
+            messagebox.showinfo("Done", "All Message Send...")
+
+        btn21 = Button(base2, text="SEND MESSAGE", font=("Arial Bold", 15), fg="white", bg="red", width=21, height=1,command = message )
+        btn21.place(x=650, y=300)
+
+    btn1 = Button(base2, text = "******Library Management******", width = 2000, height = 3,fg = "white", bg = "red", font =("Arial Bold", 20) )
+    btn1.pack()
+
+    lab1 = Label(base2, text = "Logout", fg = "white", font = "Verdana 20 underline", bg = "red" )
+    lab1.place(x = 1400 , y = 45)
+
+    btn2 = Button(base2, text = "ISSUE BOOK", fg = "white", bg = "red", font = ("Arial Bold", 15), width = 20, height = 1, command = issue_book)
+    btn2.place(x = 20, y = 150)
+
+    btn3 = Button(base2, text="RETURN BOOK", fg="white", bg="red", font=("Arial Bold", 15), width=20, height=1, command = return_book)
+    btn3.place(x = 20 , y = 200)
+
+    btn4 = Button(base2, text="ADD STUDENT", fg="white", bg="red", font=("Arial Bold", 15), width=20, height=1, command = add_students)
+    btn4.place(x=20, y=250)
+
+    btn5 = Button(base2, text="REMOVE STUDENT", fg="white", bg="red", font=("Arial Bold", 15), width=20, height=1, command = remove_students)
+    btn5.place(x=20, y=300)
+
+    btn6 = Button(base2, text="ADD BOOK", fg="white", bg="red", font=("Arial Bold", 15), width=20, height=1, command = add_book)
+    btn6.place(x=20, y=350)
+
+    btn7 = Button(base2, text="NOT RETURN BOOK", fg="white", bg="red", font=("Arial Bold", 15), width=20, height=1, command = not_return_book)
+    btn7.place(x=20, y=400)
+
+    btn8 = Button(base2, text="REMOVE BOOK", fg="white", bg="red", font=("Arial Bold", 15), width=20, height=1)
+    btn8.place(x=20, y=450)
+
+    btn9 = Button(base2, text="SEARCH BOOK", fg="white", bg="red", font=("Arial Bold", 15), width=20, height=1, command = search_book)
+    btn9.place(x=20, y=500)
+
+    btn10 = Button(base2, text="SEARCH STUDENT", fg="white", bg="red", font=("Arial Bold", 15), width=20, height=1)
+    btn10.place(x=20, y=550)
+
+    btn11 = Button(base2, text="RETURN REMAINDER", fg="white", bg="red", font=("Arial Bold", 15), width=20, height=1, command = remainder)
+    btn11.place(x=20, y=600)
+
+    btn12 = Button(base2, text="CLEAR", fg="white", bg="red", font=("Arial Bold", 15), width=20, height=1, command = clear)
+    btn12.place(x=20, y=650)
+
+    base2.mainloop()
+
+
+btn3 = Button(base1, text = "SIGN-IN", font = 15, fg = "white", bg = "red", command = method2)
+btn3.place(x = 510, y = 400)
+
+base1.mainloop()
