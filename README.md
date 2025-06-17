@@ -1,6 +1,6 @@
 # Library-Management
 
-The Library Management System is a full-featured web application designed to simplify and automate the operations of a library. It includes modules for managing users, books, issuing and returning books, and tracking activity — all through a secure login system.
+The Library Management System is a full-featured web application designed to simplify and automate the operations of a library. It includes modules for managing users, books, issuing and returning books, and tracking activity — all through a secure login system. It uses a Python Language. 
 
 🚀 Features
 🔐 User Authentication (Login / Signup)
